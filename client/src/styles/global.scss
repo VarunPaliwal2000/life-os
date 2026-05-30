@@ -1,0 +1,39 @@
+$brand-color: #2f80ed;
+$background: #f7f8fc;
+$surface: #ffffff;
+$text: #1f2937;
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: $background;
+  color: $text;
+}
+
+main,
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: $surface;
+  border-radius: 1rem;
+  box-shadow: 0 24px 64px rgba(47, 128, 237, 0.08);
+}
+
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  margin: 0;
+  background: darken($background, 4%);
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: $brand-color;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}

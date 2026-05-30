@@ -1,0 +1,43 @@
+========================================
+AD-001
+WEB APP VS MOBILE APP
+========================================
+
+Problem:
+
+Need access to Life OS throughout the day
+from desktop and iPhone.
+
+Options:
+
+1. React Native App
+
+2. Responsive React Web App
+
+Decision:
+
+Life OS will be a responsive web application.
+
+Reason:
+
+- Accessible from desktop and phone.
+- Faster development.
+- No App Store deployment.
+- Easier maintenance.
+- Supports future PWA conversion.
+- Allows focus on Life OS features instead of
+  mobile development.
+
+Tradeoffs:
+
+- Less native feel compared to mobile app.
+- No App Store presence.
+
+Future:
+
+Can be installed to iPhone home screen
+using Add To Home Screen.
+
+Status:
+
+Accepted

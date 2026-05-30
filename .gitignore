@@ -1,0 +1,16 @@
+# Node modules and local dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build outputs
+client/dist/
+server/dist/
+
+# Environment files
+.env
+.env.local
+server/.env
+
+# OS files
+.DS_Store

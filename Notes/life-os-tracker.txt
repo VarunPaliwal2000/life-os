@@ -1,0 +1,464 @@
+========================================
+LIFE OS
+WEEK 1 - FOUNDATION
+========================================
+
+GOAL OF WEEK 1
+----------------------------------------
+
+Understand Full Stack Data Flow
+
+React Form
+    ↓
+API Call
+    ↓
+Express Route
+    ↓
+Controller
+    ↓
+Mongoose Model
+    ↓
+MongoDB
+
+and back again
+
+MongoDB
+    ↓
+Controller
+    ↓
+Route
+    ↓
+Frontend
+    ↓
+Screen
+
+SUCCESS CRITERIA
+----------------------------------------
+
+[ ✅] Frontend Running
+
+[ ✅] Backend Running
+
+[ ] MongoDB Connected
+
+[ ✅] GET /health Working
+
+[ ] Create Goal API Working
+
+[ ] Goal Saved To Database
+
+[ ] Goal Fetched From Database
+
+[ ] Goal Displayed On UI
+
+[ ] I Can Explain Complete Data Flow
+
+========================================
+DAY 1
+PROJECT SETUP
+========================================
+
+LEARN
+----------------------------------------
+
+[ ✅] What is Frontend?
+
+[ ✅] What is Backend?
+
+[ ✅] What is API?
+
+[ ✅] What is Express? - ssr with js
+
+[ ✅] What is MongoDB? is json db
+
+[ ✅] What is Mongoose? used to connect mongo with BE 
+
+[ ] What is TypeScript on Backend?
+
+BUILD
+----------------------------------------
+
+[ ✅] Create Life OS Root Folder
+
+[ ✅] Create client Folder
+
+[ ✅] Create server Folder
+
+[ ✅] Setup React + TS + Vite
+
+[ ✅] Setup Express + TS
+
+[ ✅] Setup SCSS
+
+[ ✅] Setup React Router
+
+[ ✅] Verify Frontend Runs
+
+[ ✅] Verify Backend Runs
+
+RESULT
+----------------------------------------
+
+Frontend:
+localhost:5173
+
+Backend:
+localhost:5000
+
+NOTES
+----------------------------------------
+
+
+
+
+
+
+
+========================================
+DAY 2
+MONGODB SETUP
+========================================
+
+LEARN
+----------------------------------------
+
+[ ✅] What is Database?
+
+[ ✅] What is Collection? - Diff type of things under 1 DB
+
+[ ✅] What is Document? - Document is data under 1 collection
+
+[ ] What is Schema? 
+
+[ ] What is Model?
+
+BUILD
+----------------------------------------
+
+[ ✅] Create MongoDB Atlas Account
+
+[ ✅] Create Cluster
+
+[ ✅] Create life-os Database
+
+[ ✅] Install Mongoose
+
+[ ✅] Connect Backend To MongoDB
+
+[ ✅] Create Environment Variables
+
+RESULT
+----------------------------------------
+
+Backend Successfully Connected To MongoDB
+
+NOTES
+----------------------------------------
+
+
+
+
+
+
+
+========================================
+DAY 3
+FIRST API
+========================================
+
+LEARN
+----------------------------------------
+
+[ ] What is Route?
+
+[ ] What is Controller?
+
+[ ] What is Request?
+
+[ ] What is Response?
+
+[ ] GET vs POST
+
+BUILD
+----------------------------------------
+
+[ ] Create app.ts
+
+[ ] Create server.ts
+
+[ ] Create Health Route
+
+[ ] GET /health
+
+[ ] Test Using Browser
+
+[ ] Test Using Postman
+
+RESULT
+----------------------------------------
+
+GET /health Returns:
+
+{
+  "status": "ok"
+}
+
+NOTES
+----------------------------------------
+
+
+
+
+
+
+
+========================================
+DAY 4
+FIRST MODEL
+========================================
+
+LEARN
+----------------------------------------
+
+[ ] What is Mongoose Schema?
+
+[ ] What is Mongoose Model?
+
+[ ] How Data Gets Saved
+
+BUILD
+----------------------------------------
+
+[ ] Create Goal Schema
+
+[ ] Create Goal Model
+
+Goal Example:
+
+{
+  title: "Senior Frontend Job",
+  category: "Career"
+}
+
+[ ] Save Goal Manually
+
+RESULT
+----------------------------------------
+
+Goal Stored In MongoDB
+
+NOTES
+----------------------------------------
+
+
+
+
+
+
+
+========================================
+DAY 5
+CREATE GOAL API
+========================================
+
+LEARN
+----------------------------------------
+
+[ ] POST Request
+
+[ ] req.body
+
+[ ] Validation Basics
+
+BUILD
+----------------------------------------
+
+[ ] POST /goals
+
+[ ] Create Goal Controller
+
+[ ] Save Goal To DB
+
+[ ] Test Using Postman
+
+RESULT
+----------------------------------------
+
+Goal Successfully Created
+
+NOTES
+----------------------------------------
+
+
+
+
+
+
+
+========================================
+DAY 6
+FRONTEND INTEGRATION
+========================================
+
+LEARN
+----------------------------------------
+
+[ ] Fetch
+
+[ ] Axios
+
+[ ] React Query
+
+[ ] Client To Server Communication
+
+BUILD
+----------------------------------------
+
+[ ] Goal Form
+
+[ ] Submit Goal
+
+[ ] Fetch Goals
+
+[ ] Display Goals
+
+RESULT
+----------------------------------------
+
+Goal Created From UI
+
+Goal Saved To DB
+
+Goal Displayed On Screen
+
+NOTES
+----------------------------------------
+
+
+
+
+
+
+
+========================================
+DAY 7
+UNDERSTANDING DAY
+========================================
+
+CAN I EXPLAIN?
+----------------------------------------
+
+[ ] What Happens When User Clicks Submit?
+
+[ ] What Happens Inside React?
+
+[ ] What Happens Inside Express?
+
+[ ] What Happens Inside MongoDB?
+
+[ ] How Does Data Come Back?
+
+DRAW FLOW ON PAPER
+----------------------------------------
+
+Goal Form
+    ↓
+API Call
+    ↓
+Route
+    ↓
+Controller
+    ↓
+Model
+    ↓
+MongoDB
+
+MongoDB
+    ↓
+Controller
+    ↓
+Route
+    ↓
+Frontend
+    ↓
+Screen
+
+SELF SCORE
+----------------------------------------
+
+Frontend Understanding:
+/10
+
+Backend Understanding:
+/10
+
+MongoDB Understanding:
+/10
+
+Confidence:
+/10
+
+NOTES
+----------------------------------------
+
+
+
+
+
+
+
+========================================
+WEEK 1 DELIVERABLE
+========================================
+
+Life OS Dashboard
+
+Career Goals
+
+Health Goals
+
+Music Goals
+
+Create Goal Form
+
+Goal List
+
+MongoDB Connected
+
+Backend Connected
+
+Frontend Connected
+
+NO AI
+
+NO ANALYTICS
+
+NO CHARTS
+
+NO LIFE SCORE
+
+ONLY FOUNDATION
+
+========================================
+WEEK 2 PREVIEW
+========================================
+
+Areas Collection
+
+Goals Collection
+
+Systems Collection
+
+CRUD Operations
+
+Real Life Data
+
+Career
+
+Health
+
+Music
+
+Finance
+
+Personal Growth

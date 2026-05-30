@@ -1,0 +1,850 @@
+========================================
+LIFE OS INFO WHILE I LEARN
+========================================
+
+========================================
+PROJECT STRUCTURE
+========================================
+
+LIFE-OS
+|
+|-- client
+|
+|-- server
+|
+|-- package.json
+|
+|-- tsconfig.json
+|
+|-- .gitignore
+
+========================================
+ROOT FILES
+========================================
+
+package.json
+----------------------------------------
+
+Purpose:
+- Root monorepo manager
+
+Responsibilities:
+- Defines project as private workspace
+- Registers client workspace
+- Registers server workspace
+- Provides root scripts
+
+Scripts:
+
+npm run dev:client
+npm run dev:server
+
+npm run build:client
+npm run build:server
+
+npm run start:server
+
+Notes:
+
+
+
+
+
+
+tsconfig.json
+----------------------------------------
+
+Purpose:
+- TypeScript project references
+
+Responsibilities:
+- Makes TS aware of client project
+- Makes TS aware of server project
+- Future shared type support
+
+Notes:
+
+
+
+
+
+
+
+.gitignore
+----------------------------------------
+
+Purpose:
+- Ignore unnecessary files
+
+Examples:
+- node_modules
+- build files
+- dist files
+- .env files
+
+Notes:
+
+
+
+
+
+
+
+========================================
+CLIENT (FRONTEND)
+========================================
+
+Purpose:
+- User Interface
+
+Tech:
+- React
+- TypeScript
+- Vite
+- React Router
+- SCSS
+
+========================================
+client/package.json
+========================================
+
+Purpose:
+- Frontend dependencies
+
+Contains:
+- React
+- React Router
+- TypeScript
+- Vite
+- Sass
+
+Notes:
+
+
+
+
+
+
+
+========================================
+client/tsconfig.json
+========================================
+
+Purpose:
+- TypeScript configuration for React
+
+Responsibilities:
+- JSX support
+- Strict typing
+- React compilation settings
+
+Notes:
+
+
+
+
+
+
+
+========================================
+client/vite.config.ts
+========================================
+
+Purpose:
+- Configure Vite
+
+Responsibilities:
+- React plugin setup
+- Development server configuration
+
+Notes:
+
+
+
+
+
+
+
+========================================
+client/index.html
+========================================
+
+Purpose:
+- Entry HTML page
+
+Responsibilities:
+- Loads React application
+
+Notes:
+
+
+
+
+
+
+
+========================================
+client/src/main.tsx
+========================================
+
+Purpose:
+- React bootstrap file
+
+Responsibilities:
+- Mount React into DOM
+- Import global styles
+- Render App component
+
+Flow:
+
+index.html
+    ↓
+main.tsx
+    ↓
+App.tsx
+
+Notes:
+
+
+
+
+
+
+
+========================================
+client/src/App.tsx
+========================================
+
+Purpose:
+- Root React component
+
+Responsibilities:
+- React Router setup
+- Route registration
+- Layout rendering
+
+Notes:
+
+
+
+
+
+
+
+========================================
+client/src/styles/global.scss
+========================================
+
+Purpose:
+- Global styling
+
+Responsibilities:
+- Variables
+- Resets
+- Base styles
+
+Notes:
+
+
+
+
+
+
+
+========================================
+client/src/vite-env.d.ts
+========================================
+
+Purpose:
+- Vite TypeScript definitions
+
+Responsibilities:
+- Type support for Vite APIs
+
+Notes:
+
+
+
+
+
+
+
+========================================
+SERVER (BACKEND)
+========================================
+
+Purpose:
+- Handles API requests
+- Talks to database
+- Returns responses
+
+Tech:
+- Node.js
+- Express
+- TypeScript
+
+========================================
+server/package.json
+========================================
+
+Purpose:
+- Backend dependencies
+
+Contains:
+- Express
+- Dotenv
+- Nodemon
+- ts-node
+
+Notes:
+
+
+
+
+
+
+
+========================================
+server/tsconfig.json
+========================================
+
+Purpose:
+- TypeScript configuration for Node
+
+Responsibilities:
+- Compile TS → JS
+- Output to dist folder
+
+Notes:
+
+
+
+
+
+
+
+========================================
+server/.env.example
+========================================
+
+Purpose:
+- Example environment variables
+
+Example:
+
+PORT=4000
+
+NODE_ENV=development
+
+Notes:
+
+
+
+
+
+
+
+========================================
+server/src/index.ts
+========================================
+
+Purpose:
+- Start server
+
+Responsibilities:
+- Load env variables
+- Import app
+- Listen on port
+
+Think Of:
+
+"Turn on restaurant"
+
+Example:
+
+app.listen(...)
+
+Notes:
+
+
+
+
+
+
+
+========================================
+server/src/app.ts
+========================================
+
+Purpose:
+- Create Express application
+
+Responsibilities:
+- Configure middleware
+- Register routes
+
+Think Of:
+
+"Restaurant building"
+
+Example:
+
+const app = express();
+
+app.use(express.json());
+
+app.use("/api", healthRouter);
+
+Notes:
+
+
+
+
+
+
+
+========================================
+server/src/routes/health.ts
+========================================
+
+Purpose:
+- Health check route
+
+Responsibilities:
+- Verify backend is alive
+
+Think Of:
+
+"Specific counter inside restaurant"
+
+Example:
+
+router.get("/health")
+
+Notes:
+
+
+
+
+
+
+
+========================================
+REQUEST FLOW
+========================================
+
+Browser
+
+GET /api/health
+
+    ↓
+
+index.ts
+
+(Server already running)
+
+    ↓
+
+app.ts
+
+app.use("/api", healthRouter)
+
+    ↓
+
+health.ts
+
+router.get("/health")
+
+    ↓
+
+res.json(...)
+
+    ↓
+
+Browser
+
+========================================
+ROUTING EXAMPLES
+========================================
+
+Example 1
+
+app.ts
+
+app.use("/api", healthRouter)
+
+health.ts
+
+router.get("/health")
+
+URL:
+
+/api/health
+
+
+----------------------------------------
+
+Example 2
+
+app.ts
+
+app.use("/api", healthRouter)
+
+health.ts
+
+router.get("/hello")
+
+URL:
+
+/api/hello
+
+
+----------------------------------------
+
+Formula
+
+app.use("/prefix")
+
++
+
+router.get("/route")
+
+=
+
+/prefix/route
+
+========================================
+BACKEND CONCEPTS
+========================================
+
+========================================
+DATABASE
+========================================
+
+Think Of:
+
+Main cupboard
+
+Contains:
+
+Collections
+
+Life OS Example:
+
+Database:
+life-os
+
+Flow:
+
+Database
+    ↓
+Collections
+    ↓
+Documents
+
+Notes:
+
+
+
+
+
+
+========================================
+MONGODB ATLAS
+========================================
+
+Think Of:
+
+Cloud service that hosts MongoDB
+
+Similar To:
+
+Google Drive
+    ↓
+Stores Files
+
+MongoDB Atlas
+    ↓
+Stores Databases
+
+Responsibilities:
+
+- Hosts MongoDB
+- Creates Clusters
+- Creates Database Users
+- Provides Connection Strings
+
+Notes:
+
+
+
+
+
+
+========================================
+CLUSTER
+========================================
+
+Think Of:
+
+MongoDB Server
+
+Life OS Example:
+
+Cluster Name:
+
+life-os
+
+Purpose:
+
+Hosts databases
+
+Flow:
+
+Atlas
+    ↓
+Cluster
+    ↓
+Database
+    ↓
+Collection
+    ↓
+Document
+
+Notes:
+
+
+
+
+
+
+========================================
+DATABASE USER
+========================================
+
+Purpose:
+
+Used by application to access database
+
+Created In:
+
+Atlas
+    ↓
+Security
+    ↓
+Database Access
+
+Example:
+
+Username:
+lifeos_admin
+
+Password:
+********
+
+Notes:
+
+- Atlas does NOT show password again.
+- Password can be reset.
+- Application uses this user to connect.
+
+Notes:
+
+
+
+
+
+
+========================================
+CONNECTION STRING
+========================================
+
+Purpose:
+
+Address used to connect application
+to MongoDB
+
+Example:
+
+mongodb+srv://username:password@cluster.mongodb.net
+
+Flow:
+
+Node
+    ↓
+Mongoose
+    ↓
+MongoDB Atlas
+    ↓
+Cluster
+
+Notes:
+
+- Contains username
+- Contains password
+- Should never be hardcoded
+
+Notes:
+
+
+
+
+
+
+========================================
+ENVIRONMENT VARIABLES
+========================================
+
+Purpose:
+
+Store secrets outside source code
+
+Examples:
+
+PORT
+
+MONGODB_URI
+
+Stored In:
+
+.env
+
+Example:
+
+PORT=4000
+
+MONGODB_URI=xxxxx
+
+Access:
+
+process.env.PORT
+
+process.env.MONGODB_URI
+
+Reason:
+
+Avoid exposing secrets in code
+
+Notes:
+
+
+
+
+
+
+========================================
+COLLECTION
+========================================
+
+Think Of:
+
+Drawer inside cupboard
+
+Contains:
+
+Documents
+
+Life OS Examples:
+
+goals
+
+events
+
+songs
+
+maintenance
+
+systems
+
+areas
+
+Notes:
+
+
+
+
+
+
+========================================
+DOCUMENT
+========================================
+
+Think Of:
+
+Single item inside collection
+
+Example:
+
+{
+  "title": "Senior Frontend Job",
+  "category": "Career"
+}
+
+Examples:
+
+One Goal
+
+One Event
+
+One Song
+
+One Maintenance Item
+
+Notes:
+
+
+
+
+
+
+========================================
+MONGOOSE
+========================================
+
+Think Of:
+
+Translator
+
+Flow:
+
+Node
+    ↓
+Mongoose
+    ↓
+MongoDB
+
+Purpose:
+
+Allows JavaScript/TypeScript code
+to communicate with MongoDB
+
+Notes:
+========================================
+THINGS I UNDERSTAND
+========================================
+
+[ ] What is Frontend
+
+[ ] What is Backend
+
+[ ] What is API
+
+[ ] What is Express
+
+[ ] What is Router
+
+[ ] What is Middleware
+
+[ ] What is Request
+
+[ ] What is Response
+
+[ ] How Routing Works
+
+[ ] How URL Is Formed
+
+[ ] Request Flow
+
+========================================
+QUESTIONS
+========================================
