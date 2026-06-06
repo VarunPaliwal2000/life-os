@@ -39,13 +39,13 @@ SUCCESS CRITERIA
 
 [ ✅] Backend Running
 
-[ ] MongoDB Connected
+[ ✅] MongoDB Connected
 
 [ ✅] GET /health Working
 
 [ ] Create Goal API Working
 
-[ ] Goal Saved To Database
+[ ✅] Goal Saved To Database
 
 [ ] Goal Fetched From Database
 
@@ -128,9 +128,9 @@ LEARN
 
 [ ✅] What is Document? - Document is data under 1 collection
 
-[ ] What is Schema? 
+[ ✅] What is Schema?
 
-[ ] What is Model?
+[ ✅] What is Model?
 
 BUILD
 ----------------------------------------
@@ -220,18 +220,18 @@ FIRST MODEL
 LEARN
 ----------------------------------------
 
-[ ] What is Mongoose Schema?
+[ ✅] What is Mongoose Schema?
 
-[ ] What is Mongoose Model?
+[ ✅] What is Mongoose Model?
 
-[ ] How Data Gets Saved
+[ ✅] How Data Gets Saved
 
 BUILD
 ----------------------------------------
 
-[ ] Create Goal Schema
+[ ✅] Create Goal Schema
 
-[ ] Create Goal Model
+[ ✅] Create Goal Model
 
 Goal Example:
 
@@ -240,7 +240,7 @@ Goal Example:
   category: "Career"
 }
 
-[ ] Save Goal Manually
+[ ✅] Save Goal Manually
 
 RESULT
 ----------------------------------------
@@ -400,6 +400,66 @@ Confidence:
 
 NOTES
 ----------------------------------------
+
+
+
+
+
+
+
+========================================
+DAY 8
+EVENT MVP
+========================================
+
+LEARN
+----------------------------------------
+
+[ ✅] What is Schema?
+
+[ ✅] What is Model?
+
+[ ✅] What is Collection?
+
+[ ✅] What is Document?
+
+[ ✅] What is Route?
+
+[ ✅] What is POST vs GET
+
+[ ✅] What is direct route-to-model implementation
+
+BUILD
+----------------------------------------
+
+[ ✅] Create Event Schema
+
+[ ✅] Create Event Model
+
+[ ✅] Create POST /api/events
+
+[ ✅] Create GET /api/events
+
+[ ✅] Create Add Event page
+
+[ ✅] Save Event from UI
+
+[ ✅] Add Quick Add Events buttons
+
+RESULT
+----------------------------------------
+
+[ ✅] Event created from UI
+
+[ ✅] Event saved to MongoDB
+
+[ ✅] Event displayed in UI
+
+[ ✅] Quick Add events saved and displayed
+
+[ ✅] Today summary and day score added
+
+NOTES
 
 
 

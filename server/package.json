@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon --watch src --ext ts --exec \"ts-node src/index.ts\"",
     "build": "tsc -p tsconfig.json",
+    "seed:goal": "ts-node src/seedGoal.ts",
     "start": "node dist/index.js"
   },
   "dependencies": {
