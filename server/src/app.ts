@@ -42,8 +42,13 @@ const corsOptions = {
   allowedHeaders: ["Content-Type"],
 };
 
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  }),
+);
+// app.options("*", cors(corsOptions));
 
 // Parse JSON bodies for incoming requests
 app.use(express.json());
