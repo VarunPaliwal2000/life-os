@@ -16,15 +16,20 @@ const app = express();
  * Environment variable CORS_ORIGINS should be a comma-separated list of allowed origins.
  * Example: "https://app.vercel.app,https://app-staging.vercel.app"
  */
-const corsOrigins = (process.env.CORS_ORIGINS || "http://localhost:5173").split(",");
+const corsOrigins = (process.env.CORS_ORIGINS || "http://localhost:5173").split(
+  ",",
+);
 
 app.use((req, res, next) => {
   const origin = req.headers.origin;
 
   // Check if request origin is in the allowed list
-  if (origin && corsOrigins.some(allowed => origin === allowed.trim())) {
+  if (origin && corsOrigins.some((allowed) => origin === allowed.trim())) {
     res.header("Access-Control-Allow-Origin", origin);
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.header(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PUT, DELETE, OPTIONS",
+    );
     res.header("Access-Control-Allow-Headers", "Content-Type");
   }
 
