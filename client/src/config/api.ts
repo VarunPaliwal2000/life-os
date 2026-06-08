@@ -11,9 +11,7 @@
  */
 
 export const API_BASE_URL =
-  process.env.NODE_ENV === "production"
-    ? process.env.VITE_API_URL || "https://api.example.com"
-    : "/api";
+  process.env.VITE_API_URL || "https://api.example.com";
 
 export const API_ENDPOINTS = {
   EVENTS: `${API_BASE_URL}/events`,
