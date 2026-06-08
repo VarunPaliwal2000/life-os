@@ -1,5 +1,6 @@
 import { FormEvent, useEffect, useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { API_ENDPOINTS } from "./config/api";
 import {
   CUSTOM_EVENT,
   EVENT_AREAS,
@@ -51,7 +52,7 @@ function EventPage() {
     setError(null);
 
     try {
-      const response = await fetch("/api/events");
+      const response = await fetch(API_ENDPOINTS.EVENTS);
       const data = await response.json();
       setEvents(data);
     } catch (err) {
@@ -71,7 +72,7 @@ function EventPage() {
 
     try {
       const eventType = getEventTypeByTitle(title) ?? CUSTOM_EVENT;
-      const response = await fetch("/api/events", {
+      const response = await fetch(API_ENDPOINTS.EVENTS, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -95,7 +96,7 @@ function EventPage() {
     setError(null);
 
     try {
-      const response = await fetch("/api/events", {
+      const response = await fetch(API_ENDPOINTS.EVENTS, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
